@@ -1,7 +1,7 @@
 name: OpenClaw
 options:
   preGenCommand: bash ../../scripts/ios-generate-test-tls-identity.sh && node ../../scripts/prepare-apple-mermaid.mjs
-  bundleIdPrefix: ai.openclawfoundation
+  bundleIdPrefix: ai.stoneymonkey
   deploymentTarget:
     iOS: "26.2"
   xcodeVersion: "26.0"
@@ -154,7 +154,7 @@ targets:
         CFBundleDisplayName: OpenClaw
         CFBundleIconName: "$(ASSETCATALOG_COMPILER_APPICON_NAME)"
         CFBundleURLTypes:
-          - CFBundleURLName: ai.openclawfoundation.app
+          - CFBundleURLName: ai.stoneymonkey.app
             CFBundleURLSchemes:
               - "$(OPENCLAW_URL_SCHEME)"
         CFBundleShortVersionString: "$(OPENCLAW_MARKETING_VERSION)"

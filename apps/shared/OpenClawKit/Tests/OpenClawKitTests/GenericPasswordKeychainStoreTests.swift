@@ -52,7 +52,7 @@ struct GenericPasswordKeychainStoreTests {
     }
 
     @Test func `shared access group scopes keychain mutation queries`() {
-        let accessGroup = "group.ai.openclawfoundation.app.shared"
+        let accessGroup = "group.ai.stoneymonkey.app.shared"
         var updateQuery: [String: Any] = [:]
         var addQuery: [String: Any] = [:]
 

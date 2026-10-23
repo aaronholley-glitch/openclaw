@@ -296,7 +296,7 @@ final class TalkModeManager {
         (@MainActor (_ method: String, _ paramsJSON: String?) async throws -> Void)?
     #endif
 
-    private let logger = Logger(subsystem: "ai.openclawfoundation.app", category: "TalkMode")
+    private let logger = Logger(subsystem: "ai.stoneymonkey.app", category: "TalkMode")
 
     private func setStatus(
         _ text: String,

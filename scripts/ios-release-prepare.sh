@@ -133,10 +133,10 @@ write_generated_file "${RELEASE_XCCONFIG}" <<EOF
 ${RELEASE_SIGNING_XCCONFIG}
 OPENCLAW_DEVELOPMENT_TEAM = ${TEAM_ID}
 OPENCLAW_IOS_SELECTED_TEAM = ${TEAM_ID}
-OPENCLAW_APP_BUNDLE_ID = ai.openclawfoundation.app
-OPENCLAW_SHARE_BUNDLE_ID = ai.openclawfoundation.app.share
-OPENCLAW_ACTIVITY_WIDGET_BUNDLE_ID = ai.openclawfoundation.app.activitywidget
-OPENCLAW_WATCH_APP_BUNDLE_ID = ai.openclawfoundation.app.watchkitapp
+OPENCLAW_APP_BUNDLE_ID = ai.stoneymonkey.app
+OPENCLAW_SHARE_BUNDLE_ID = ai.stoneymonkey.app.share
+OPENCLAW_ACTIVITY_WIDGET_BUNDLE_ID = ai.stoneymonkey.app.activitywidget
+OPENCLAW_WATCH_APP_BUNDLE_ID = ai.stoneymonkey.app.watchkitapp
 OPENCLAW_CODE_SIGN_ENTITLEMENTS = Sources/OpenClawAppAttest.entitlements
 OPENCLAW_APNS_ENTITLEMENT_ENVIRONMENT = production
 OPENCLAW_APP_ATTEST_ENVIRONMENT = production

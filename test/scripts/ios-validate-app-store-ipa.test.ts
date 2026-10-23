@@ -112,7 +112,7 @@ async function writeUnsignedFixture(
     zip.file(`Payload/OpenClaw.app/${name}`, body, { date: new Date(0) });
   const healthUsage = "OpenClaw reads Health data for Health Summaries.";
   const infoBody = {
-    CFBundleIdentifier: "ai.openclawfoundation.app",
+    CFBundleIdentifier: "ai.stoneymonkey.app",
     CFBundleDisplayName: options.displayName ?? "OpenClaw",
     OpenClawGitCommit: options.buildCommit ?? BUILD_COMMIT,
     OpenClawBuildTimestamp: BUILD_TIMESTAMP,

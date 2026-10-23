@@ -69,8 +69,8 @@ enum OpenClawAppModelRegistry {
 
 @MainActor
 final class OpenClawAppDelegate: NSObject, UIApplicationDelegate, @preconcurrency UNUserNotificationCenterDelegate {
-    private let logger = Logger(subsystem: "ai.openclawfoundation.app", category: "Push")
-    private let backgroundWakeLogger = Logger(subsystem: "ai.openclawfoundation.app", category: "BackgroundWake")
+    private let logger = Logger(subsystem: "ai.stoneymonkey.app", category: "Push")
+    private let backgroundWakeLogger = Logger(subsystem: "ai.stoneymonkey.app", category: "BackgroundWake")
     private static var wakeRefreshTaskIdentifier: String {
         "\(appBundleIdentifier).bgrefresh"
     }
@@ -79,7 +79,7 @@ final class OpenClawAppDelegate: NSObject, UIApplicationDelegate, @preconcurrenc
         guard let bundleId = Bundle.main.bundleIdentifier?.trimmingCharacters(in: .whitespacesAndNewlines),
               !bundleId.isEmpty
         else {
-            return "ai.openclawfoundation.app"
+            return "ai.stoneymonkey.app"
         }
 
         return bundleId

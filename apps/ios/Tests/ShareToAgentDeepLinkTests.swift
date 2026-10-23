@@ -25,7 +25,7 @@ import Testing
     }
 
     @Test func `app group identifier uses canonical open claw group`() {
-        #expect(OpenClawAppGroup.canonicalIdentifier == "group.ai.openclawfoundation.app.shared")
+        #expect(OpenClawAppGroup.canonicalIdentifier == "group.ai.stoneymonkey.app.shared")
     }
 
     @Test func `build message includes shared fields`() throws {

@@ -43,7 +43,7 @@ final class ScreenRecordService: @unchecked Sendable {
     private let recordQueue: DispatchQueue
 
     init(
-        recordQueue: DispatchQueue = DispatchQueue(label: "ai.openclawfoundation.app.screenrecord"),
+        recordQueue: DispatchQueue = DispatchQueue(label: "ai.stoneymonkey.app.screenrecord"),
         startReplayKitCaptureAction: @escaping StartCaptureAction = { includeAudio, handler, completion in
             let recorder = RPScreenRecorder.shared()
             recorder.isMicrophoneEnabled = includeAudio

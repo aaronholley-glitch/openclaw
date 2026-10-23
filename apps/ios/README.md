@@ -113,13 +113,13 @@ Prereqs:
 - Apple account signed into Xcode for the official OpenClaw team (`FWJYW4S8P8`)
 - Fastlane Apple Developer Portal session for the official OpenClaw team when creating bundle IDs or enabling services
 - Release-owner access to the encrypted signing repo password (`MATCH_PASSWORD`)
-- App Store Connect app already created for `ai.openclawfoundation.app`
+- App Store Connect app already created for `ai.stoneymonkey.app`
 - App Store Connect API key set up in Keychain via `scripts/ios-app-store-connect-keychain-setup.sh` when auto-resolving a build number or uploading to App Store Connect
 
 Release behavior:
 
-- Local development uses the official `ai.openclawfoundation.app*` bundle IDs when the OpenClaw team is available, and unique `ai.openclawfoundation.app.test.*` bundle IDs only for other development teams.
-- App Store release uses official `ai.openclawfoundation.app*` bundle IDs through a temporary generated xcconfig in `apps/ios/build/AppStoreRelease.xcconfig`.
+- Local development uses the official `ai.stoneymonkey.app*` bundle IDs when the OpenClaw team is available, and unique `ai.stoneymonkey.app.test.*` bundle IDs only for other development teams.
+- App Store release uses official `ai.stoneymonkey.app*` bundle IDs through a temporary generated xcconfig in `apps/ios/build/AppStoreRelease.xcconfig`.
 - App Store release uses manual `Apple Distribution` signing with profile names pinned in `apps/ios/Config/AppStoreSigning.json`.
 - Fastlane owns one-time Developer Portal setup, encrypted `match` signing sync to the repo/branch pinned in `apps/ios/Config/AppStoreSigning.json`, and release handling.
 - App Store release also switches the app to `OpenClawPushMode=appStore`, which derives relay transport, official distribution, the official production relay, production APNs, production relay profile, `appleStrict` proof, and the App-Attest-capable entitlement file.
@@ -229,10 +229,10 @@ scripts/ios-app-store-connect-keychain-setup.sh \
 This should create `apps/ios/fastlane/.env` with non-secret App Store Connect variables while the private key stays in Keychain.
 
 3. Confirm the App Store Connect app and Apple Developer identifiers/capabilities exist for:
-   - `ai.openclawfoundation.app`
-   - `ai.openclawfoundation.app.share`
-   - `ai.openclawfoundation.app.activitywidget`
-   - `ai.openclawfoundation.app.watchkitapp`
+   - `ai.stoneymonkey.app`
+   - `ai.stoneymonkey.app.share`
+   - `ai.stoneymonkey.app.activitywidget`
+   - `ai.stoneymonkey.app.watchkitapp`
 
    The main app and share extension must both be associated with the App Group pinned in `apps/ios/Config/AppStoreSigning.json`. The main app must also have App Attest enabled.
 
@@ -402,7 +402,7 @@ Automatic wake/reconnect hardening:
 5. If network path is unclear:
    - switch to manual host/port + TLS in Gateway Advanced settings
 6. In Xcode console, filter for subsystem/category signals:
-   - `ai.openclawfoundation.app`
+   - `ai.stoneymonkey.app`
    - `GatewayDiag`
    - `APNs registration failed`
 7. Validate background expectations:

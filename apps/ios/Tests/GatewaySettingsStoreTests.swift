@@ -11,7 +11,7 @@ private struct KeychainEntry: Hashable {
 }
 
 private let gatewayService = GatewaySettingsStore._testGatewayService
-private let nodeService = "ai.openclawfoundation.app.node"
+private let nodeService = "ai.stoneymonkey.app.node"
 private let instanceIdEntry = KeychainEntry(service: nodeService, account: "instanceId")
 private let preferredGatewayEntry = KeychainEntry(service: gatewayService, account: "preferredStableID")
 private let lastGatewayEntry = KeychainEntry(service: gatewayService, account: "lastDiscoveredStableID")

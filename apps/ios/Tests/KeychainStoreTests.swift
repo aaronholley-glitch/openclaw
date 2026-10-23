@@ -5,7 +5,7 @@ import Testing
 
 struct KeychainStoreTests {
     @Test func `save load update delete round trip`() {
-        let service = "ai.openclawfoundation.app.tests.\(UUID().uuidString)"
+        let service = "ai.stoneymonkey.app.tests.\(UUID().uuidString)"
         let account = "value"
 
         #expect(GenericPasswordKeychainStore.delete(service: service, account: account))

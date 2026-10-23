@@ -22,7 +22,7 @@ normalize_bundle_id() {
   raw="$(printf '%s' "$raw" | tr '[:upper:]' '[:lower:]')"
   raw="$(printf '%s' "$raw" | sed -E 's/[^a-z0-9.-]+/-/g; s/\.+/./g; s/^-+//; s/[.-]+$//')"
   if [[ -z "$raw" ]]; then
-    raw="ai.openclawfoundation.app.test.local"
+    raw="ai.stoneymonkey.app.test.local"
   fi
   printf '%s\n' "$raw"
 }
@@ -60,9 +60,9 @@ bundle_suffix="$(sanitize_identifier_segment "${identity_source}")"
 bundle_base="${OPENCLAW_IOS_APP_BUNDLE_ID:-${OPENCLAW_IOS_BUNDLE_ID_BASE:-}}"
 if [[ -z "${bundle_base}" ]]; then
   if [[ "${team_id}" == "${CANONICAL_TEAM_ID}" ]]; then
-    bundle_base="ai.openclawfoundation.app"
+    bundle_base="ai.stoneymonkey.app"
   else
-    bundle_base="ai.openclawfoundation.app.test.${bundle_suffix}"
+    bundle_base="ai.stoneymonkey.app.test.${bundle_suffix}"
   fi
 fi
 bundle_base="$(normalize_bundle_id "${bundle_base}")"

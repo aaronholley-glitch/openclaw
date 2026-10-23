@@ -11,7 +11,7 @@ final class RealtimeTalkOutput: @unchecked Sendable {
     private let legacyPlayer: PCMStreamingAudioPlaying
     private let transport: RealtimeTalkRelayTransport
     private let notification: AsyncStream<Void>.Continuation
-    private let logger = Logger(subsystem: "ai.openclawfoundation.app", category: "RealtimeTalkRelay")
+    private let logger = Logger(subsystem: "ai.stoneymonkey.app", category: "RealtimeTalkRelay")
     private var effects: [Effect] = []
     private var pendingStartupEvents = 0
     var startupRoutingReady = false

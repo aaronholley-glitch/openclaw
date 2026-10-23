@@ -15,7 +15,7 @@ final class LiveActivityManager {
         let verbatimDetail: String?
     }
 
-    private let logger = Logger(subsystem: "ai.openclawfoundation.app", category: "LiveActivity")
+    private let logger = Logger(subsystem: "ai.stoneymonkey.app", category: "LiveActivity")
     private let connectingStaleSeconds: TimeInterval = 120
     private let transientStaleSeconds: TimeInterval = 300
     private let hydrationStaleSeconds: TimeInterval = 300

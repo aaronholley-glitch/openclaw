@@ -267,7 +267,7 @@ public final class RealtimeTalkRelaySession {
     private let output: RealtimeTalkOutput
     private var outputEffectsTask: Task<Void, Never>?
     private var outputLevelTask: Task<Void, Never>?
-    private let logger = Logger(subsystem: "ai.openclawfoundation.app", category: "RealtimeTalkRelay")
+    private let logger = Logger(subsystem: "ai.stoneymonkey.app", category: "RealtimeTalkRelay")
     private let onStatus: (String) -> Void
     private let onIssue: (RealtimeTalkRelayIssue) -> Void
     private let onTermination: (RealtimeTalkRelayTermination) -> Void

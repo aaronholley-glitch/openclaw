@@ -308,7 +308,7 @@ extension GatewayIngressControllerTests {
             #expect(server.requests
                 .contains { $0.isWebSocket && $0.headers["cf-access-token"] == fixture.acceptedToken })
             #expect(GenericPasswordKeychainStore.loadString(
-                service: "ai.openclawfoundation.app.share-gateway-relay",
+                service: "ai.stoneymonkey.app.share-gateway-relay",
                 account: "credentials.v1",
                 accessGroup: OpenClawAppGroup.identifier) == nil)
             let managedMetadata = try #require(defaults.data(forKey: "share.gatewayRelay.config.v1"))

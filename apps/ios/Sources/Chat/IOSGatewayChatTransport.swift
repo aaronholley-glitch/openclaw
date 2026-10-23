@@ -13,7 +13,7 @@ struct IOSGatewayChatTransport: OpenClawChatGatewayTransport {
         try await self.gateway.request(request)
     }
 
-    static let logger = Logger(subsystem: "ai.openclawfoundation.app", category: "ios.chat.transport")
+    static let logger = Logger(subsystem: "ai.stoneymonkey.app", category: "ios.chat.transport")
     let gateway: GatewayNodeSession
     private let widgetGateway: GatewayNodeSession?
     private(set) var globalAgentId: String?

@@ -13,7 +13,7 @@ require_relative "testflight"
 
 default_platform(:ios)
 
-APP_STORE_APP_IDENTIFIER = "ai.openclawfoundation.app"
+APP_STORE_APP_IDENTIFIER = "ai.stoneymonkey.app"
 DEFAULT_APP_STORE_CONNECT_KEYCHAIN_SERVICE = "openclaw-app-store-connect-key"
 DEFAULT_SNAPSHOT_DEVICE_FAMILIES = [
   {

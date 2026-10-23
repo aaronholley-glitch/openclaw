@@ -124,7 +124,7 @@ function runIosRun(
 
 describe("scripts/ios-run.sh", () => {
   it.each([true, false])("isolates simulator proof secrets with sandbox mode=%s", (sandbox) => {
-    const fixture = makeFixture("ai.openclawfoundation.app");
+    const fixture = makeFixture("ai.stoneymonkey.app");
     const proofSecret = "x".repeat(32);
     const customProofSecret = "y".repeat(32);
     runIosRun(
@@ -146,7 +146,7 @@ describe("scripts/ios-run.sh", () => {
         "OPENCLAW_PUSH_RELAY_BASE_URL=https://ios-push-relay-sandbox.openclaw.ai",
       );
     }
-    expect(log).toContain("simctl launch iPhone 17 ai.openclawfoundation.app");
+    expect(log).toContain("simctl launch iPhone 17 ai.stoneymonkey.app");
     expect(log).toContain(`simctl-launch-proof ${sandbox ? "set" : "unset"}`);
     expect(log).not.toContain("proof-env leaked");
     expect(log).not.toContain(proofSecret);
@@ -156,7 +156,7 @@ describe("scripts/ios-run.sh", () => {
   });
 
   it("does not ignore simulator boot failures other than already booted", () => {
-    const fixture = makeFixture("ai.openclawfoundation.app");
+    const fixture = makeFixture("ai.stoneymonkey.app");
 
     expect(() => runIosRun(fixture, { SIMCTL_BOOT_MODE: "fail" })).toThrow();
     expect(readFileSync(fixture.logFile, "utf8")).not.toContain("simctl launch");

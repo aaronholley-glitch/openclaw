@@ -67,7 +67,7 @@ final class GatewayDiscoveryModel {
         self.appendDebugLog("start()")
 
         self.browserSession.start(
-            queueLabelPrefix: "ai.openclawfoundation.app.gateway-discovery",
+            queueLabelPrefix: "ai.stoneymonkey.app.gateway-discovery",
             onState: { [weak self] domain, state, status in
                 guard let self else { return }
                 self.statusText = status

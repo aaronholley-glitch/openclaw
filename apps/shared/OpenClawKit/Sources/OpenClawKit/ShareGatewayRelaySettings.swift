@@ -35,7 +35,7 @@ public enum ShareGatewayRelaySettings {
     private static let relayConfigKey = "share.gatewayRelay.config.v1"
     // On iOS an App Group is also a Keychain access group. Reuse the existing
     // group so the host and extension share only this credential bundle.
-    private static let relayCredentialService = "ai.openclawfoundation.app.share-gateway-relay"
+    private static let relayCredentialService = "ai.stoneymonkey.app.share-gateway-relay"
     private static let relayCredentialAccount = "credentials.v1"
     private static let lastEventKey = "share.gatewayRelay.event.v1"
 

@@ -62,12 +62,12 @@ describe("scripts/ios-configure-signing.sh", { concurrent: false }, () => {
     const stdout = runConfigureSigning("FWJYW4S8P8");
     const generated = readGeneratedSigning();
 
-    expect(stdout).toContain("team=FWJYW4S8P8 app=ai.openclawfoundation.app");
+    expect(stdout).toContain("team=FWJYW4S8P8 app=ai.stoneymonkey.app");
     expect(generated).toContain("OPENCLAW_DEVELOPMENT_TEAM = FWJYW4S8P8");
     expect(generated).toContain("OPENCLAW_CODE_SIGN_ENTITLEMENTS = Sources/OpenClaw.entitlements");
-    expect(generated).toContain("OPENCLAW_APP_BUNDLE_ID = ai.openclawfoundation.app");
-    expect(generated).toContain("OPENCLAW_SHARE_BUNDLE_ID = ai.openclawfoundation.app.share");
-    expect(generated).toContain("OPENCLAW_APP_GROUP_ID = group.ai.openclawfoundation.app.shared");
+    expect(generated).toContain("OPENCLAW_APP_BUNDLE_ID = ai.stoneymonkey.app");
+    expect(generated).toContain("OPENCLAW_SHARE_BUNDLE_ID = ai.stoneymonkey.app.share");
+    expect(generated).toContain("OPENCLAW_APP_GROUP_ID = group.ai.stoneymonkey.app.shared");
     expect(generated).toContain("OPENCLAW_ACTIVITY_WIDGET_PROFILE = ");
   });
 
@@ -76,14 +76,14 @@ describe("scripts/ios-configure-signing.sh", { concurrent: false }, () => {
     const generated = readGeneratedSigning();
 
     expect(stdout).toContain(
-      "canonical_team=FWJYW4S8P8 local_team=Y3YUZP442G app=ai.openclawfoundation.app.test.localuser-y3yuzp442g",
+      "canonical_team=FWJYW4S8P8 local_team=Y3YUZP442G app=ai.stoneymonkey.app.test.localuser-y3yuzp442g",
     );
     expect(generated).toContain("OPENCLAW_DEVELOPMENT_TEAM = Y3YUZP442G");
     expect(generated).toContain(
-      "OPENCLAW_APP_BUNDLE_ID = ai.openclawfoundation.app.test.localuser-y3yuzp442g",
+      "OPENCLAW_APP_BUNDLE_ID = ai.stoneymonkey.app.test.localuser-y3yuzp442g",
     );
     expect(generated).toContain(
-      "OPENCLAW_APP_GROUP_ID = group.ai.openclawfoundation.app.test.localuser-y3yuzp442g.shared",
+      "OPENCLAW_APP_GROUP_ID = group.ai.stoneymonkey.app.test.localuser-y3yuzp442g.shared",
     );
   });
 });

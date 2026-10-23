@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 private let clientDatabaseLogger = Logger(
-    subsystem: "ai.openclawfoundation.app",
+    subsystem: "ai.stoneymonkey.app",
     category: "ClientDatabases")
 
 private struct WatchChatPreview {
@@ -292,16 +292,16 @@ final class NodeAppModel {
         var pendingResolutions: [WatchExecApprovalResolveEvent]?
     }
 
-    private let deepLinkLogger = Logger(subsystem: "ai.openclawfoundation.app", category: "DeepLink")
+    private let deepLinkLogger = Logger(subsystem: "ai.stoneymonkey.app", category: "DeepLink")
     private nonisolated static let agentRequestNodeEventTimeoutSeconds = 8
     private nonisolated static let execApprovalNotificationGuidanceSuppressedKey =
         "notifications.execApprovalGuidance.suppressed"
-    private let pushWakeLogger = Logger(subsystem: "ai.openclawfoundation.app", category: "PushWake")
-    private let pendingActionLogger = Logger(subsystem: "ai.openclawfoundation.app", category: "PendingAction")
-    private let locationWakeLogger = Logger(subsystem: "ai.openclawfoundation.app", category: "LocationWake")
-    private let watchExecApprovalLogger = Logger(subsystem: "ai.openclawfoundation.app", category: "WatchExecApproval")
+    private let pushWakeLogger = Logger(subsystem: "ai.stoneymonkey.app", category: "PushWake")
+    private let pendingActionLogger = Logger(subsystem: "ai.stoneymonkey.app", category: "PendingAction")
+    private let locationWakeLogger = Logger(subsystem: "ai.stoneymonkey.app", category: "LocationWake")
+    private let watchExecApprovalLogger = Logger(subsystem: "ai.stoneymonkey.app", category: "WatchExecApproval")
     private let execApprovalNotificationLogger = Logger(
-        subsystem: "ai.openclawfoundation.app",
+        subsystem: "ai.stoneymonkey.app",
         category: "ExecApprovalNotification")
     enum CameraHUDKind {
         case photo
@@ -4371,7 +4371,7 @@ extension NodeAppModel {
         let gateway = self.nodeGateway
         self.nodeHostStatsTask = Task {
             var failureLogged = false
-            let logger = Logger(subsystem: "ai.openclawfoundation.app", category: "NodeHostStats")
+            let logger = Logger(subsystem: "ai.stoneymonkey.app", category: "NodeHostStats")
             // App route generations survive socket reconnects; the captured route fences both.
             while !Task.isCancelled, shouldContinue(), await gateway.currentRoute() == route {
                 guard !Task.isCancelled, shouldContinue() else { return }

@@ -9,15 +9,15 @@ OPENCLAW_CODE_SIGN_IDENTITY = Apple Development
 OPENCLAW_CODE_SIGN_ENTITLEMENTS = Sources/OpenClaw.entitlements
 OPENCLAW_DEVELOPMENT_TEAM = FWJYW4S8P8
 
-OPENCLAW_APP_BUNDLE_ID = ai.openclawfoundation.app
-OPENCLAW_SHARE_BUNDLE_ID = ai.openclawfoundation.app.share
-OPENCLAW_APP_GROUP_ID = group.ai.openclawfoundation.app.shared
-OPENCLAW_WATCH_APP_BUNDLE_ID = ai.openclawfoundation.app.watchkitapp
-OPENCLAW_ACTIVITY_WIDGET_BUNDLE_ID = ai.openclawfoundation.app.activitywidget
+OPENCLAW_APP_BUNDLE_ID = ai.stoneymonkey.app
+OPENCLAW_SHARE_BUNDLE_ID = ai.stoneymonkey.app.share
+OPENCLAW_APP_GROUP_ID = group.ai.stoneymonkey.app.shared
+OPENCLAW_WATCH_APP_BUNDLE_ID = ai.stoneymonkey.app.watchkitapp
+OPENCLAW_ACTIVITY_WIDGET_BUNDLE_ID = ai.stoneymonkey.app.activitywidget
 OPENCLAW_APNS_ENTITLEMENT_ENVIRONMENT = development
 
-OPENCLAW_APP_PROFILE = ai.openclawfoundation.app Development
-OPENCLAW_SHARE_PROFILE = ai.openclawfoundation.app.share Development
+OPENCLAW_APP_PROFILE = ai.stoneymonkey.app Development
+OPENCLAW_SHARE_PROFILE = ai.stoneymonkey.app.share Development
 OPENCLAW_ACTIVITY_WIDGET_PROFILE =
 OPENCLAW_WATCH_APP_PROFILE =
 

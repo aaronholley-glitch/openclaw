@@ -3,7 +3,7 @@ import Foundation
 import OpenClawKit
 
 enum PushRelayRegistrationStore {
-    private static let service = "ai.openclawfoundation.app.pushrelay"
+    private static let service = "ai.stoneymonkey.app.pushrelay"
     private static let registrationStateAccount = "registration-state"
     private static let appAttestKeyIDAccount = "app-attest-key-id"
     private static let appAttestedKeyIDAccount = "app-attested-key-id"

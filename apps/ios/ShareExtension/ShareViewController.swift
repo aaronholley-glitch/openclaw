@@ -27,7 +27,7 @@ final class ShareViewController: UIViewController {
         var attachmentError: ShareImageProcessor.ProcessError?
     }
 
-    private let logger = Logger(subsystem: "ai.openclawfoundation.app", category: "ShareExtension")
+    private let logger = Logger(subsystem: "ai.stoneymonkey.app", category: "ShareExtension")
     private let composeView = ShareComposeView()
     private var didPrepareDraft = false
     private var isSending = false
